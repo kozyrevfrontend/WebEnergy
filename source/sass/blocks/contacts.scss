@@ -1,0 +1,58 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contacts__wrapper {
+  margin: 0;
+}
+
+.contacts__link {
+  font-family: "Open Sans Condensed", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+  letter-spacing: 0.025em;
+  color: #767676;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.contacts__callback-btn {
+  display: block;
+  margin: 3px 0 0 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  span {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    text-decoration: underline dashed;
+    color: #767676;
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    span {
+      opacity: 0.6;
+    }
+  }
+}
