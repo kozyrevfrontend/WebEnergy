@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+При удалении блоков menu, slider, content (catalog) верхняя и нижняя части макета должны быть прижаты к верху и к низу окна браузера соответственно
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+footer {
+  margin-top: auto;
+}
+/* ----------- */

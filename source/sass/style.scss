@@ -1,10 +1,3 @@
 @import "normalize.scss";
 @import "fonts.scss";
-
-.ptsans {
-  font-family: "PT Sans", "Arial", sans-serif;
-}
-
-.opensans {
-  font-family: "Open Sans Condensed", "Arial", sans-serif;
-}
+@import "scaffolding.scss";
