@@ -33,6 +33,13 @@ img {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+  &--slider {
+    position: relative;
+
+    max-width: 1248px;
+    padding: 0;
+  }
 }
 
 footer {

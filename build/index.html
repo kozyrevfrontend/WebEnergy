@@ -20,7 +20,7 @@
           <a class="logo__link">
             <picture>
               <source type="image/webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x">
-              <img class="logo__image" src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Название компании" width="273" height="100">
+              <img class="logo__image" src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Название компании" width="273" height="100" loading="lazy">
             </picture>
           </a>
         </div>
@@ -39,32 +39,57 @@
     </header>
     <main class="main">
       <nav class="main__navigation">
-        <ul class="site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Каталог</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Доставка и оплата</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Прайс-лист</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Контакты</a>
-          </li>
-        </ul>
+        <div class="container">
+          <ul class="site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Прайс-лист</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="slider">
-        <ul class="slider-container">
-          <li class="slide slide--red">1</li>
-          <li class="slide slide--green">2</li>
-          <li class="slide slide--blue">3</li>
-        </ul>
-        <button class="left">Left</button>
-        <button class="right">Right</button>
+        <div class="container container--slider">
+          <ul class="slider__container">
+            <li class="slider__item">
+              <picture>
+                <source type="image/webp" srcset="img/slide1@1x.webp 1x, img/slide1@2x.webp 2x">
+                <img class="slider__image" src="img/slide1@1x.png" srcset="img/slide1@2x.png 2x" alt="Слайд 1" width="1268" height="462" loading="lazy">
+              </picture>
+            </li>
+            <li class="slider__item">
+              <picture>
+                <source type="image/webp" srcset="img/slide2@1x.webp 1x, img/slide2@2x.webp 2x">
+                <img class="slider__image" src="img/slide2@1x.png" srcset="img/slide2@2x.png 2x" alt="Слайд 2" width="1268" height="462" loading="lazy">
+              </picture>
+            </li>
+          </ul>
+          <div class="slider__controls">
+            <button class="slider__btn slider__btn--left" aria-label="Предыдущий слайд">
+              <picture>
+                <source type="image/webp" srcset="img/arrow-left@1x.webp 1x, img/arrow-left@2x.webp 2x">
+                <img src="img/arrow-left@1x.png" srcset="img/arrow-left@2x.png 2x" alt="Назад" width="34" height="61" loading="lazy">
+              </picture>
+            </button>
+            <button class="slider__btn slider__btn--right" aria-label="Следующий слайд">
+              <picture>
+                <source type="image/webp" srcset="img/arrow-right@1x.webp 1x, img/arrow-right@2x.webp 2x">
+                <img src="img/arrow-right@1x.png" srcset="img/arrow-right@2x.png 2x" alt="Назад" width="34" height="61" loading="lazy">
+              </picture>
+            </button>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer"></footer>
