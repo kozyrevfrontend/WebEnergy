@@ -18,8 +18,9 @@ var include = require("posthtml-include");
 var del = require("del");
 var gulp = require("gulp");
 var rollup = require("gulp-better-rollup");
-var resolve = require(`rollup-plugin-node-resolve`);
-var commonjs = require(`rollup-plugin-commonjs`);
+var resolve = require("rollup-plugin-node-resolve");
+var commonjs = require("rollup-plugin-commonjs");
+var babel = require("gulp-babel");
 
 gulp.task("css", function () {
   return gulp
@@ -104,25 +105,24 @@ gulp.task("copy", function () {
 });
 
 gulp.task("js-main", () => {
-  return (
-    gulp
-      .src("source/js/main.js")
-      .pipe(sourcemap.init())
-      .pipe(rollup({}, "iife"))
-      .pipe(sourcemap.write(""))
-      .pipe(gulp.dest("build/js"))
-  );
+  return gulp
+    .src("source/js/main.js")
+    .pipe(sourcemap.init())
+    .pipe(rollup({}, "iife"))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(sourcemap.write(""))
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("js-vendor", () => {
-  return (
-    gulp
-      .src("source/js/vendor.js")
-      .pipe(sourcemap.init())
-      .pipe(rollup({ plugins: [resolve(), commonjs()] }, "iife"))
-      .pipe(sourcemap.write(""))
-      .pipe(gulp.dest("build/js"))
-  );
+  return gulp
+    .src("source/js/vendor.js")
+    .pipe(sourcemap.init())
+    .pipe(rollup({ plugins: [resolve(), commonjs()] }, "iife"))
+    .pipe(sourcemap.write(""))
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("clean", function () {
