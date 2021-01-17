@@ -40,6 +40,10 @@ img {
     max-width: 1248px;
     padding: 0;
   }
+
+  &--catalog {
+    display: flex;
+  }
 }
 
 footer {
