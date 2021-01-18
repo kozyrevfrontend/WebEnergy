@@ -1,0 +1,28 @@
+.copyright__main {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+}
+
+.copyright__contacts {
+  margin: 0;
+}
+
+.copyright__mail {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

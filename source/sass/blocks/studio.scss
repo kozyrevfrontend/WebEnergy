@@ -1,0 +1,23 @@
+.studio {
+  display: flex;
+}
+
+.studio__link {
+  display: block;
+  margin-right: 9px;
+  padding-top: 6px;
+}
+
+.studio__text {
+  width: 180px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+
+  span {
+    text-decoration: underline;
+  }
+}

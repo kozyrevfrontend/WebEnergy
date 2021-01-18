@@ -48,3 +48,44 @@
     opacity: 0.8;
   }
 }
+
+.site-list__column {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .site-list__item {
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .site-list__link {
+    font-size: 14px;
+    line-height: 26px;
+    text-decoration: underline;
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
