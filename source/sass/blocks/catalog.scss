@@ -1,5 +1,6 @@
 .catalog__aside {
-  max-width: 200px;
+  flex-shrink: 0;
+  width: 200px;
   padding-top: 13px;
 }
 
@@ -9,4 +10,8 @@
 
 .catalog__price {
   margin-top: 103px;
+}
+
+.catalog__main {
+  margin-top: 21px;
 }
