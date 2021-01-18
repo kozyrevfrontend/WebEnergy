@@ -1,5 +1,7 @@
 .popup {
   position: fixed;
+
+  display: none;
 }
 
 .popup__overlay {
@@ -50,6 +52,16 @@
     color: #535353;
   }
 
+  input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
   input {
     width: 341px;
     height: 42px;
@@ -58,6 +70,8 @@
 
     border: 1px solid #c3c3c3;
     border-radius: none;
+
+    appearance: textfield;
 
     &:invalid {
       border-color: #ff8383;
@@ -116,5 +130,5 @@
 
   picture {
     line-height: 0;
-  };
+  }
 }

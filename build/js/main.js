@@ -81,6 +81,65 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   }();
 
   var slider = new Slider(document.querySelector('.slider'), 4000);
+
+  var Popup = /*#__PURE__*/function () {
+    function Popup(button) {
+      _classCallCheck(this, Popup);
+
+      this.button = button;
+      this.popup = window.$('.popup');
+      this.popupOverlay = window.$('.popup__overlay');
+      this.closeButton = window.$('.popup__close-btn');
+      this.userNameInput = window.$('#user-name');
+      this.showPopup = this.showPopup.bind(this);
+      this.hidePopup = this.hidePopup.bind(this);
+      this.closePopupEscPress = this.closePopupEscPress.bind(this);
+      this.popupOverlayClickHandler = this.popupOverlayClickHandler.bind(this);
+    }
+
+    _createClass(Popup, [{
+      key: "init",
+      value: function init() {
+        this.button.on('click', this.showPopup);
+      }
+    }, {
+      key: "closePopupEscPress",
+      value: function closePopupEscPress(evt) {
+        if (evt.key === "Escape") {
+          this.hidePopup();
+        }
+      }
+    }, {
+      key: "popupOverlayClickHandler",
+      value: function popupOverlayClickHandler(evt) {
+        if (evt.target === evt.currentTarget) {
+          this.hidePopup();
+        }
+      }
+    }, {
+      key: "showPopup",
+      value: function showPopup() {
+        this.popup.fadeIn(1000);
+        this.userNameInput.focus();
+        window.$('body').css('overflow', 'hidden');
+        window.$(document).on('keydown', this.closePopupEscPress);
+        this.popupOverlay.on('click', this.popupOverlayClickHandler);
+        this.closeButton.on('click', this.hidePopup);
+      }
+    }, {
+      key: "hidePopup",
+      value: function hidePopup() {
+        this.popup.fadeOut(1000);
+        window.$('body').css('overflow', 'visible');
+        window.$(document).off('keydown', this.closePopupEscPress);
+      }
+    }]);
+
+    return Popup;
+  }();
+
+  var popup = new Popup(window.$('.contacts__callback-btn'));
   slider.init();
+  popup.init();
 })();
 //# sourceMappingURL=main.js.map

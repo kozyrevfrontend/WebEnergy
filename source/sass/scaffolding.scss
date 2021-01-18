@@ -10,10 +10,9 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
+  overflow-x: hidden;
 
   font-family: "PT Sans", "Arial", sans-serif;
-
-  overflow: hidden;
 }
 
 a {
