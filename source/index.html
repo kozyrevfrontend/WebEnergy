@@ -553,6 +553,39 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup">
+      <div class="popup__overlay">
+        <div class="popup__container">
+          <h2 class="popup__title">Обратная связь</h2>
+          <form class="popup__form" method="POST" action="https://echo.htmlacademy.ru">
+            <p class="popup__form-container">
+              <label for="user-name">Ваше имя <sup>*</sup></label>
+              <input id="user-name" name="user-name" type="text" required>
+            </p>
+            <p class="popup__form-container">
+              <label for="user-phone">Телефон <sup>*</sup></label>
+              <input id="user-phone" name="user-phone" type="text" inputmode="numeric" required>
+            </p>
+            <p class="popup__form-container">
+              <label for="user-name">Email <sup>*</sup></label>
+              <input id="user-email" name="user-email" type="email" required>
+            </p>
+            <p class="popup__form-container">
+              <label for="user-message">Сообщение</label>
+              <textarea id="user-message" name="user-message" cols="30" rows="10"></textarea>
+            </p>
+            <button class="popup__submit-btn" type="submit"><span>Отправить</span></button>
+          </form>
+          <button class="popup__close-btn" type="button" aria-label="Закрыть форму обратной связи">
+            <picture>
+              <source type="image/webp" srcset="img/cross@1x.webp 1x, img/cross@2x.webp 2x">
+              <img src="img/cross@1x.png" srcset="img/cross@2x.png 2x" alt="Закрыть" width="27" height="27">
+            </picture>
+          </button>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
